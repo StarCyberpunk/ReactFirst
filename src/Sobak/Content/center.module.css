@@ -1,0 +1,29 @@
+.Center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "Z DI"
+"T DI";
+}
+.Zagol{
+    grid-area: Z ;
+}
+.Text{
+    grid-area: T;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas: "TX"
+    "BN";
+}
+.Txt{
+    background: aliceblue;
+    grid-area: TX;
+}
+.BN{
+    background:darkblue;
+    grid-area: BN;
+}
+.Dogimg{
+    grid-area: DI ;
+    align-content: flex-end;
+}

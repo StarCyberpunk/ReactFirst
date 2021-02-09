@@ -1,0 +1,26 @@
+.Center{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+.Peoples{
+background-color: firebrick;
+    padding: 20px;
+}
+.People {
+    color: black;
+}
+.HeadMes{}
+.Messages{
+padding: 20px;
+}
+.MessageI{
+
+    border-radius: 50%;
+    text-align: center;
+    padding-left: 30%;
+
+}
+.MessageU{
+    text-align: left;
+    padding-left: 30%;
+}

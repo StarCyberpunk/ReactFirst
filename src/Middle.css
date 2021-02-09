@@ -1,0 +1,41 @@
+.Dogimg{
+
+    grid-area: D;
+    width:40px;
+    height:50px;
+}
+.Middel{
+
+}
+.info{
+grid-area: I;
+}
+.content{
+grid-area: C;
+}
+.Old{
+grid-area: O;
+}
+.Header{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.Dogtime{
+    grid-column-start: 1;
+    grid-column-end:1 ;
+    grid-row-end:1 ;
+    grid-row-start:1 ;
+    grid-area: DT;
+}
+.HD{
+    grid-area: HD;
+}
+.Dogsense{
+    grid-area: DS;
+}
+.BN{
+    grid-area: BN;
+}
+.TF{
+    grid-area: TF;
+}

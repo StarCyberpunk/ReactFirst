@@ -1,0 +1,46 @@
+.Center{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: "P FO"
+"T FO";
+}
+.Profile{
+    grid-area: P ;
+}
+.Text{
+    grid-area: T;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas: "TX"
+    "BN";
+}
+.Txt{
+    background: aliceblue;
+    grid-area: TX;
+}
+.BN{
+    background:darkblue;
+    grid-area: BN;
+}
+.Forum{
+    display: grid;
+    grid-area:FO;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 1fr ;
+    grid-template-areas: "Z"
+"Th"
+"C";
+}
+.Zagol{
+    grid-area: Z;
+    background-color: blanchedalmond;
+}
+.Comments{
+    grid-area: Th;
+    background-color: darkblue;
+}
+.UComments{
+    grid-area: C;
+    background-color: firebrick;
+}

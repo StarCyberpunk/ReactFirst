@@ -1,0 +1,14 @@
+.Post{
+    display: grid;
+    grid-area: Post;
+    background-color: cadetblue;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr ;
+    grid-template-areas: "User Cont"
+"User Cont"}
+.User{
+    grid-area:User ;
+}
+.Content{
+    grid-area: Cont;
+}
