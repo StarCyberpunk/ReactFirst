@@ -1,42 +1,46 @@
 import React from 'react';
 import c from './Dialogs.module.css';
-import {NavLink} from "react-router-dom";
-let DataName=[
-    {id:1, name:"Вася"}, {id:2, name:"Валя"}
-        ]
-let DataMessage1=[
-    {id:12, message:"Ты где,шкура?"}, {id:22, message:"Бухаю"}
-]
-const People=(props)=>{
-    return(
-                <div className={c.People }>
-                    <NavLink to={"/content/dialogs/" + props.id }>{props.name}</NavLink>
-                </div>
-        )
-}
-const MessageU=(props)=>{
-    return(
-        <div className={c.MessageU}>{props.name +':'+ props.message}</div>
-    )
-}
-const MessageI=(props)=> {
-    return (
-        <div className={c.MessageI}>{props.name + ':' + props.message}</div>
+import MessageU from "./Message/Message";
+import People from "./DialogsItem/Dialogsitem";
+import {AddMessageCre, ChangeMessageCre} from "../../../Redux/State";
 
-    )
+/*const AddMessageCre=(text)=>{
+    return {type:'ADD-MESSAGE', TextMessage:text}
 }
+const ChangeMessageCre=(text)=>{
+    return {type:'CHANGE-MESSAGE',
+        NewMessage:text}
+}*/
 const Dialogs=(props)=>{
+    let wames=props.DataName.map(n=><People name={n.name} id={n.id}/>);
+    let Dialo=props.DataMessage1.OldMessage.map(k=>
+        <MessageU name={k.name} message={k.message}/>
+    );
+
+    let TextMessage=React.createRef();
+    let SendText=()=>{
+
+       let text=TextMessage.current.value;
+       props.dispatch(AddMessageCre(text));
+       props.dispatch(ChangeMessageCre('')
+    );
+    }
+    let MessageOnChange=()=>{
+        let text=TextMessage.current.value;
+        props.dispatch(ChangeMessageCre(text));
+    }
     return(<div className={c.Center}>
             <div className={c.Peoples}>
-               <People name={DataName[0].name} id={DataName[0].id}/>
-               <People name={DataName[1].name} id={DataName[1].id}/>
+                {wames}
             </div>
             <div className={c.Messages}>
-                <div className={c.HeadMes}>{DataName[0].name}</div>
+                <div className={c.HeadMes}>{props.DataName[0].name}</div>
                 <div className={c.Soob}>
-                <MessageU name={DataName[0].name} message={DataMessage1[0].message} id={DataMessage1[0].id}/>
-                <MessageI name={DataName[1].name} message={DataMessage1[1].message} id={DataMessage1[1].id}/>
-
+                    {Dialo}
+                </div>
+                <div className={c.TextMessage}>
+                    <textarea onChange={MessageOnChange} ref={TextMessage} value={props.DataMessage1.NewMessage}/>
+                    <button onClick={SendText}>Send</button>
                 </div>
 
             </div>

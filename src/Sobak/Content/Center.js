@@ -1,16 +1,20 @@
 import React from 'react';
 import classes from './center.module.css';
+import {NavLink} from "react-router-dom";
 //main
-const Content1 = () => {
+const Content1 = (props) => {
+
     return (<div className={classes.Center}>
-            <div className={classes.Zagol}>Piper</div>
+            <div className={classes.Zagol}>{props.DataCenter[0].Zagol}</div>
             <div className={classes.Text}>
 
-                <div className={classes.Txt}>dawdada</div>
-                <div className={classes.BN}>Back Next</div>
+                <div className={classes.Txt}>{props.DataCenter[0].Text}</div>
+                <div className={classes.BN}>
+                   <button >Back </button>
+                    <button ><NavLink to="/Content/centerDog2">Next</NavLink></button></div>
             </div>
             <div className={classes.Dogimg}><img height='430'
-                                                 src='https://avatanplus.com/files/resources/original/57e89652e2a3c157648b33f0.png'/>
+                                                 src={props.DataCenter[0].img}/>
             </div>
         </div>
     )

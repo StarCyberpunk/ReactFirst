@@ -6,9 +6,12 @@
 "T DI";
 }
 .Zagol{
+    font-size: 80px;
+    margin-top: 70px;
     grid-area: Z ;
 }
 .Text{
+
     grid-area: T;
     display: grid;
     grid-template-rows: 5fr 1fr;
@@ -16,6 +19,7 @@
     "BN";
 }
 .Txt{
+
     background: aliceblue;
     grid-area: TX;
 }
@@ -24,6 +28,7 @@
     grid-area: BN;
 }
 .Dogimg{
+    margin-top: 200px;
     grid-area: DI ;
     align-content: flex-end;
 }
