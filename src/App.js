@@ -5,7 +5,7 @@ import Middel from "./Middel";
 import Footer from "./Footer";
 import Testgrid from "./Sobak/testgrid";
 const App=(props)=> {
-
+debugger;
   return (
       <div className="App">
           <Testgrid DataPost={props.appstate.DataPost}

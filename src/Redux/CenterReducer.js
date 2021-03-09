@@ -1,6 +1,6 @@
 import siba from "./siba.png";
 
-let Ce2Init={
+let initialState={
     DataCenter: [
         {
             Zagol: 'Piper',
@@ -15,7 +15,7 @@ let Ce2Init={
     ]
 }
 debugger;
-const CenterReducer=(state=Ce2Init,action)=>{
+const CenterReducer=(state=initialState,action)=>{
     return state;
 }
 export default CenterReducer;

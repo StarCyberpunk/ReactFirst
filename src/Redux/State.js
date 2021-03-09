@@ -2,6 +2,7 @@
 import siba from "./siba.png"
 import Center2Reducer from "./Center2Reducer";
 import DialogsReducer from "./DialogsReducer";
+import CenterReducer from "./CenterReducer";
 
 let Store= {
     _CallSubcriber(state) {
@@ -99,6 +100,7 @@ let Store= {
             this._CallSubcriber(this._State);
         }
 */
+        this._State.DataCenter=CenterReducer(this._State.DataCenter,action);
         this._State.DataPost=Center2Reducer(this._State.DataPost,action);
         this._State.DataMessage1=DialogsReducer(this._State.DataMessage1,action)
         this._CallSubcriber(this._State);

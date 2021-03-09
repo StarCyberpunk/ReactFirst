@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import Store from "./Redux/ReduxStore";
+import Store from "./Redux/State";
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -17,8 +17,8 @@ export let RenderTree=(State)=>{
         document.getElementById('root')
     );
 }
-RenderTree(Store.getState());
-Store.subscribe(RenderTree);
+RenderTree(Store.GetState());
+Store.Subscribe(RenderTree);
 
 
 
