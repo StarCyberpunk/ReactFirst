@@ -105,19 +105,8 @@ let Store= {
 
     }
 }
-export const AddPostCre=(text)=>{
-    return {type:'ADD-POST', TextMessage:text}
-}
-export const ChangePostCre=(text)=>{
-    return {type:'CHANGE-NEW-POST',
-        TextMessage:text}}
 
-export const AddMessageCre=(text)=>{
-    return {type:'ADD-MESSAGE', TextMessage:text}
-}
-export const ChangeMessageCre=(text)=>{
-    return {type:'CHANGE-MESSAGE',
-        NewMessage:text}}
+
 
 export default Store;
 window.Store=Store;

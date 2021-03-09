@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './center2.module.css';
 import Post from "./Post";
-import {AddPostCre, ChangePostCre} from "../../Redux/State";
+import {AddPostCre, ChangePostCre} from "../../Redux/Center2Reducer";
 /*import {AddPost, ChangeNewPost} from "../../Redux/State";*/
 // Forum
 const Profile=(props)=>{
@@ -24,6 +24,7 @@ const Content2=(props)=>{
         props.dispatch(ChangePostCre(text));
 
     }
+    debugger
     let Comme=props.DataPost.Posts.map(n=>
         <Post name={n.name} text={n.text} />)
     return(<div className={classes.Center}>

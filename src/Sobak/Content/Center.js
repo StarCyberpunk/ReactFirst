@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './center.module.css';
 import {NavLink} from "react-router-dom";
 //main
+debugger;
 const Content1 = (props) => {
 
     return (<div className={classes.Center}>

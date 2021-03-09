@@ -2,7 +2,7 @@ import React from 'react';
 import c from './Dialogs.module.css';
 import MessageU from "./Message/Message";
 import People from "./DialogsItem/Dialogsitem";
-import {AddMessageCre, ChangeMessageCre} from "../../../Redux/State";
+import {AddMessageCre, ChangeMessageCre} from "../../../Redux/DialogsReducer";
 
 /*const AddMessageCre=(text)=>{
     return {type:'ADD-MESSAGE', TextMessage:text}

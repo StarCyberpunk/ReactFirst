@@ -8,7 +8,7 @@ import Dialogs from "./Content/Dialogs/Dialogs";
 import {BrowserRouter , Route} from "react-router-dom";
 import Conte2 from "./Content/centerDog2";
 const Testgrid=(props)=>{
-
+debugger;
     return(
         <BrowserRouter>
         <div className='Test-grid'>
@@ -19,6 +19,7 @@ const Testgrid=(props)=>{
                 {/*<Route path="/Content/center" component={Content1}/>
                 <Route path="/Content/center2" component={Content2}/>
                 <Route path="/Content/Dialogs" component={Dialogs}/>*/}
+
                 <Route path="/Content/centerDog2" render={()=><Conte2
                     DataCenter={props.DataCenter}
                 />}/>

@@ -13,10 +13,6 @@ const App=(props)=> {
                     DataNameFriends={props.appstate.DataNameFriends}
                     DataMessage1={props.appstate.DataMessage1}
                     DataCenter={props.appstate.DataCenter}
-                    /*AddMessage={props.AddMessage}
-                    ChangeNewPost={props.ChangeNewPost}
-                    AddPost={props.AddPost}
-                    ChangeMessage={props.ChangeMessage}*/
                     dispatch={props.dispatch}
 
           />
